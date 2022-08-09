@@ -21,13 +21,14 @@ export class PreferencesWeb extends WebPlugin implements PreferencesPlugin {
   }
 
   public async get(options: GetOptions): Promise<GetResult> {
-    const value = this.impl.getItem(this.applyPrefix(options.key));
+    const jsonValue = this.impl.getItem(this.applyPrefix(options.key));
+    const value = typeof jsonValue != 'object' ? JSON.parse(jsonValue) : jsonValue;
 
     return { value };
   }
 
   public async set(options: SetOptions): Promise<void> {
-    this.impl.setItem(this.applyPrefix(options.key), options.value);
+    this.impl.setItem(this.applyPrefix(options.key), JSON.stringify(options.value));
   }
 
   public async remove(options: RemoveOptions): Promise<void> {

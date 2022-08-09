@@ -32,7 +32,7 @@ export interface GetResult {
    *
    * @since 1.0.0
    */
-  value: string | null;
+  value: string | number | boolean | null;
 }
 
 export interface SetOptions {
@@ -48,7 +48,7 @@ export interface SetOptions {
    *
    * @since 1.0.0
    */
-  value: string;
+  value: string | number | boolean;
 }
 
 export interface RemoveOptions {

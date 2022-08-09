@@ -215,9 +215,9 @@ Removes old data with `_cap_` prefix from the Capacitor 2 Storage plugin.
 
 #### GetResult
 
-| Prop        | Type                        | Description                                                                                                                       | Since |
-| ----------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| **`value`** | <code>string \| null</code> | The value from preferences associated with the given key. If a value was not previously set or was removed, value will be `null`. | 1.0.0 |
+| Prop        | Type                                             | Description                                                                                                                       | Since |
+| ----------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| **`value`** | <code>string \| number \| boolean \| null</code> | The value from preferences associated with the given key. If a value was not previously set or was removed, value will be `null`. | 1.0.0 |
 
 
 #### GetOptions
@@ -229,10 +229,10 @@ Removes old data with `_cap_` prefix from the Capacitor 2 Storage plugin.
 
 #### SetOptions
 
-| Prop        | Type                | Description                                                   | Since |
-| ----------- | ------------------- | ------------------------------------------------------------- | ----- |
-| **`key`**   | <code>string</code> | The key to associate with the value being set in preferences. | 1.0.0 |
-| **`value`** | <code>string</code> | The value to set in preferences with the associated key.      | 1.0.0 |
+| Prop        | Type                                     | Description                                                   | Since |
+| ----------- | ---------------------------------------- | ------------------------------------------------------------- | ----- |
+| **`key`**   | <code>string</code>                      | The key to associate with the value being set in preferences. | 1.0.0 |
+| **`value`** | <code>string \| number \| boolean</code> | The value to set in preferences with the associated key.      | 1.0.0 |
 
 
 #### RemoveOptions
